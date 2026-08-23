@@ -59,6 +59,7 @@
              font-size:clamp(1.9rem, 6vw, 2.8rem); letter-spacing:.01em; line-height:1; }
   .wordmark .vitals{ color:var(--gold-soft); }
   .office{ font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.78); font-weight:500; }
+  .nowrap{ white-space:nowrap; }
 
   /* ---------- Layout ---------- */
   main{ flex:1; width:100%; max-width:860px; margin:0 auto; padding:2.4rem 1.5rem 1rem; }
@@ -167,7 +168,7 @@
         <img src="icon-192.png" alt="OMD Vitals logo">
       </div>
       <h1 class="wordmark">OMD <span class="vitals">Vitals</span></h1>
-      <p class="office">Office of the Medical Director · Sir Lester Bird Medical Centre</p>
+      <p class="office">Office of the Medical Director<br><span class="nowrap">Sir Lester Bird Medical Centre</span></p>
     </div>
   </header>
 
@@ -252,7 +253,7 @@
 
   <footer>
     <div class="rule"></div>
-    Maintained by the <strong>Office of the Medical Director</strong> · Sir Lester Bird Medical Centre<br>
+    Maintained by the <strong>Office of the Medical Director</strong><br><span class="nowrap">Sir Lester Bird Medical Centre</span><br>
     Access enquiries: <span class="phone">268-484-2713</span>
   </footer>
 
