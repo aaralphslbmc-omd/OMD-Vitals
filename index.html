@@ -51,10 +51,10 @@
   }
   @keyframes trace{ to{ stroke-dashoffset:0; } }
   .brand{ position:relative; z-index:1; display:inline-flex; flex-direction:column; align-items:center; gap:.8rem; }
-  .emblem{ width:54px; height:54px; border-radius:50%; display:grid; place-items:center;
-           border:1.5px solid var(--gold); background:rgba(196,160,87,.10); }
+  .emblem{ width:72px; height:72px; border-radius:18px; display:grid; place-items:center;
+           overflow:hidden; box-shadow:0 4px 18px rgba(0,0,0,.28); }
   .emblem svg{ width:27px; height:27px; }
-  .emblem img{ width:100%; height:100%; border-radius:50%; object-fit:cover; }
+  .emblem img{ width:100%; height:100%; object-fit:cover; display:block; }
   .wordmark{ font-family:"Spectral", Georgia, serif; font-weight:500;
              font-size:clamp(1.9rem, 6vw, 2.8rem); letter-spacing:.01em; line-height:1; }
   .wordmark .vitals{ color:var(--gold-soft); }
@@ -163,10 +163,8 @@
       <path d="M0 45 H150 l10 -26 l10 36 l10 -30 l8 20 H420 l10 -26 l10 36 l10 -30 l8 20 H720 l10 -26 l10 36 l10 -30 l8 20 H1020 l10 -26 l10 36 l10 -30 l8 20 H1200"/>
     </svg>
     <div class="brand">
-      <div class="emblem" id="emblem" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 4v16M4 12h16"/>
-        </svg>
+      <div class="emblem" id="emblem">
+        <img src="icon-192.png" alt="OMD Vitals logo">
       </div>
       <h1 class="wordmark">OMD <span class="vitals">Vitals</span></h1>
       <p class="office">Office of the Medical Director · Sir Lester Bird Medical Centre</p>
