@@ -453,12 +453,23 @@
     }).join('');
   }
   // Best-effort surname from the roster "name" (falls back to the email).
+  // Handles: "LAST, First"  /  "LAST First"  /  "First LAST"  /  hyphenated & two-word surnames.
   function deriveLastName(name, email){
-    var n = String(name || "").trim();
-    if(n){
-      if(n.indexOf(',') >= 0){ n = n.split(',')[0].trim(); }   // "LAST, First"
-      else { var parts = n.split(/\s+/); n = parts[parts.length - 1]; } // "First LAST"
-      return titleCaseName(n);
+    var raw = String(name || "").trim();
+    if(raw){
+      // "LAST, First"  -> take everything before the comma.
+      if(raw.indexOf(',') >= 0){ return titleCaseName(raw.split(',')[0].trim()); }
+      var tokens = raw.split(/\s+/);
+      // The roster writes the surname in UPPER CASE and the first name in Title case
+      // (e.g. "RALPH Antonette"). Grab the leading run of all-uppercase tokens.
+      var upper = [];
+      for(var i = 0; i < tokens.length; i++){
+        var letters = tokens[i].replace(/[^A-Za-z]/g, '');
+        if(letters && letters === letters.toUpperCase()){ upper.push(tokens[i]); }
+        else break;
+      }
+      if(upper.length){ return titleCaseName(upper.join(' ')); }        // "RALPH Antonette" -> Ralph
+      return titleCaseName(tokens[tokens.length - 1]);                  // "Antonette RALPH" -> Ralph
     }
     var local = String(email || "").split('@')[0] || "";
     if(local.indexOf('.') >= 0){ var p = local.split('.'); return titleCaseName(p[p.length - 1]); }
