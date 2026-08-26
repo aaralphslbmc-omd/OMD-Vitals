@@ -17,7 +17,7 @@
   .wrap{max-width:640px;margin:0 auto;min-height:100vh;background:var(--page);}
 
   header.top{background:var(--burgundy);border-bottom:3px solid var(--gold);padding:14px 18px 13px;position:sticky;top:0;z-index:30;}
-  .backlink{display:inline-flex;align-items:center;gap:4px;background:none;border:none;cursor:pointer;padding:0;color:#E8CFA0;font-size:13px;margin-bottom:8px;}
+  .backlink{display:inline-flex;align-items:center;gap:4px;background:none;border:none;cursor:pointer;padding:0;color:#E8CFA0;font-size:13px;margin-bottom:8px;text-decoration:none;}
   .backlink:hover{color:#fff;}
   .title-row{display:flex;align-items:center;gap:9px;}
   .title-row .mark{color:var(--gold);font-size:20px;line-height:1;}
@@ -112,10 +112,10 @@
 <body>
 <div class="wrap">
   <header class="top">
-    <button class="backlink" onclick="history.back()" aria-label="Back to OMD Vitals">
+    <a class="backlink" href="index.html" aria-label="Back to OMD Vitals">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
       OMD Vitals
-    </button>
+    </a>
     <div class="title-row">
       <span class="mark" aria-hidden="true">✚</span>
       <h1>Physicians' Directory</h1>
