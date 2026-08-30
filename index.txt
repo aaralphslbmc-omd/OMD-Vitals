@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OMD Vitals has moved</title>
+<meta http-equiv="refresh" content="0; url=https://slbmc-medical-staff-leave.web.app/vitals/">
+<link rel="canonical" href="https://slbmc-medical-staff-leave.web.app/vitals/">
+<script>
+  location.replace("https://slbmc-medical-staff-leave.web.app/vitals/" + (location.hash || ""));
+</script>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+       background:#6B1D2A;color:#fff;font-family:'Inter',system-ui,-apple-system,sans-serif;text-align:center;padding:24px}
+  .box{max-width:420px}
+  h1{font-family:'Spectral',Georgia,serif;font-size:22px;font-weight:600;margin:0 0 10px;color:#C4A057}
+  p{font-size:15px;line-height:1.5;margin:0 0 18px;opacity:.92}
+  a{display:inline-block;background:#C4A057;color:#4a1420;padding:11px 20px;border-radius:8px;
+    text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+  <div class="box">
+    <h1>OMD Vitals has moved</h1>
+    <p>This address has changed. You should be redirected automatically. If not, tap below.</p>
+    <a href="https://slbmc-medical-staff-leave.web.app/vitals/">Go to OMD Vitals</a>
+  </div>
+</body>
+</html>
